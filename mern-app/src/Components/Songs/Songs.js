@@ -6,7 +6,8 @@ class Songs extends Component {
         super()
 
         this.state = {
-            name: ["Emotionless", "In My Feelings", "Summer Games"] 
+            name: ["Emotionless", "In My Feelings", "Summer Games"],
+            length: ""
         }
     }
     render() {

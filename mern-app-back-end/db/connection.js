@@ -1,12 +1,11 @@
 const mongoose = require('mongoose')
-
+mongoose.connect('mongodb://localhost/drake-mern')
+mongoose.promise = Promise;
 
 if (process.env.NODE_ENV == "production") {
-    mongoose.connect(mongodb:Franky:Code23@ds231658.mlab.com:31658/drake-mern)
+    mongoose.connect(process.env.MLAB_URL)
   } else {
     mongoose.connect("mongodb://localhost/whenpresident");
   }
-
-mongoose.promise = Promise;
 
 module.exports = mongoose
