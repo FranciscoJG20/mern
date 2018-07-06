@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './Components/App/App';
 import registerServiceWorker from './registerServiceWorker';
+import store from './store'
+import { Provider } from "react-redux";
 
 
-// let songs = {
-//     songs: ["Emotionless", "In My Feelings", "Summer Games"]
-// }
 
-ReactDOM.render(<App 
-    // songs={songs.songs} 
-    />, document.getElementById('root'));
+ReactDOM.render(
+<Provider store={store}>
+<App />
+</Provider>, 
+document.getElementById('root'));
 registerServiceWorker();
